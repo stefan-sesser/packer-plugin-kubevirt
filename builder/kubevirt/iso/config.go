@@ -91,6 +91,8 @@ type Config struct {
 	Networks []Network `mapstructure:"networks" required:"false"`
 	// MediaFiles is a path list of files to be copied and used during the ISO installation.
 	MediaFiles []string `mapstructure:"media_files" required:"false"`
+	// MediaFiles is a path list of files to be copied and used during the ISO installation.
+	MediaLabel string `mapstructure:"media_label" required:"false"`
 	// BootCommand is a list of strings that represent the keystrokes to be sent to the VM console
 	// to automate the installation via a new VNC connection.
 	BootCommand []string `mapstructure:"boot_command" required:"false"`

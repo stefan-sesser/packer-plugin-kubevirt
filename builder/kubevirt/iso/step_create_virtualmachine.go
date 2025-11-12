@@ -34,6 +34,7 @@ func (s *StepCreateVirtualMachine) Run(ctx context.Context, state multistep.Stat
 	preferenceKind := s.Config.PreferenceKind
 	osType := s.Config.OperatingSystemType
 	networks := s.Config.Networks
+	mediaLabel := s.Config.MediaLabel
 
 	if osType == "" || (osType != "linux" && osType != "windows") {
 		ui.Errorf("OS type of '%s' is not supported, set 'linux' or 'windows'.", osType)
@@ -48,6 +49,7 @@ func (s *StepCreateVirtualMachine) Run(ctx context.Context, state multistep.Stat
 		preferenceName,
 		instanceTypeKind,
 		preferenceKind,
+		mediaLabel,
 		osType,
 		networks)
 

@@ -77,6 +77,10 @@ build {
 
 - `media_files` ([]string) - MediaFiles is a path list of files to be copied and used during the ISO installation.
 
+- `media_label` (string) - Label is the disk volume label to use on the virtual drive
+  constructed and attached to the VM. This is ignored for Windows systems.
+  Defaults to `OEMDRV`.
+
 - `boot_command` ([]string) - BootCommand is a list of strings that represent the keystrokes to be sent to the VM console
   to automate the installation via a new VNC connection.
 
